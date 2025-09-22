@@ -28,22 +28,6 @@
   Theme
 --------------------------------*/
 :root {
-  /* Light mode (designed to pair with your dark mode) */
-  /*To be fixed....*/
-  --background: 195 100% 94%;         
-  --foreground: 220 30% 15%; 
-  --foreground-secondary: 239 51.4% 27.1%;            
-  --card: 210 43.5% 80%;                 
-  --primary:  263 100% 16%;             
-  --primary-foreground: 242 5.4% 86.8%;     
-  --border: 220 20% 80%;
-  --button-hover: 195 100% 90.3%;
-
-  --icon-bg: 222 47% 65.3%;
-}
-
-/* Dark mode */
-.dark {
   --background: 210 100% 3%;                    /*bg for all*/  
   --foreground: 242 16.9% 86.8%;                /*text color in bg*/
   --foreground-secondary: 239 49% 47%;          /*text secondary color in bg*/        
@@ -55,6 +39,20 @@
   --button-hover: 233 14.4% 14.4%;              /*button hover bg color*/
 
   --icon-bg: 222 40% 12%;
+}
+
+/* Light Mode */
+.light {
+  --background: 195 100% 94%;         
+  --foreground: 220 30% 15%; 
+  --foreground-secondary: 239 51.4% 27.1%;            
+  --card: 210 43.5% 80%;                 
+  --primary:  263 100% 16%;             
+  --primary-foreground: 242 5.4% 86.8%;     
+  --border: 220 20% 80%;
+  --button-hover: 195 100% 90.3%;
+
+  --icon-bg: 222 47% 65.3%;
 }
 
 /* Background utilities */
