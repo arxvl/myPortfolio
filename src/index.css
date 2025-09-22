@@ -1,0 +1,406 @@
+@import "tailwindcss";
+
+/*-------------------------------
+  RFonts
+--------------------------------*/
+@font-face {
+  font-family: "Lexend Mega";
+  src: url("../src/assets/fonts/LexendMega-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Livvic";
+  src: url("../src/assets/fonts/Livvic-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("../src/assets/fonts/SourceCodePro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*-------------------------------
+  Theme
+--------------------------------*/
+:root {
+  /* Light mode (designed to pair with your dark mode) */
+  /*To be fixed....*/
+  --background: 195 100% 94%;         
+  --foreground: 220 30% 15%; 
+  --foreground-secondary: 239 51.4% 27.1%;            
+  --card: 210 43.5% 80%;                 
+  --primary:  263 100% 16%;             
+  --primary-foreground: 242 5.4% 86.8%;     
+  --border: 220 20% 80%;
+  --button-hover: 195 100% 90.3%;
+
+  --icon-bg: 222 47% 65.3%;
+}
+
+/* Dark mode */
+.dark {
+  --background: 210 100% 3%;                    /*bg for all*/  
+  --foreground: 242 16.9% 86.8%;                /*text color in bg*/
+  --foreground-secondary: 239 49% 47%;          /*text secondary color in bg*/        
+  --card: 222 47% 8%;                 
+  --primary: 263 100% 16%;                      /*for navbar, button*/
+  --primary-foreground: 242 5.4% 86.8%;         /*text in nav. button*/
+  --border: 0 0% 50%;                  
+  --button: 242 100% 94%;
+  --button-hover: 233 14.4% 14.4%;              /*button hover bg color*/
+
+  --icon-bg: 222 40% 12%;
+}
+
+/* Background utilities */
+.bg-background { background-color: hsl(var(--background)); }
+.bg-card { background-color: hsl(var(--card)); }
+.bg-primary { background-color: hsl(var(--primary)); }
+.bg-icon-bg { background-color: hsl(var(--icon-bg)); }
+.ring-foreground-secondary {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: hsl(var(--foreground-secondary) / var(--tw-ring-opacity));
+}
+
+/* Text utilities */
+.text-foreground { color: hsl(var(--foreground)); }
+.text-foreground-secondary { color: hsl(var(--foreground-secondary)); }
+.text-primary-foreground { color: hsl(var(--primary-foreground)); }
+
+/* Border utilities */
+.border-border { border-color: hsl(var(--border)); }
+.border-foreground { border-color :hsl(var(--foreground)); }
+
+/* Hover example */
+.hover\:bg-button-hover:hover { background-color: hsl(var(--card)); }
+
+/* For icon links */
+.text-foreground-link {
+  color: hsl(var(--foreground));
+  transition: color 0.3s ease;
+}
+
+.text-foreground-link:hover {
+  color: #0D47A1; /* Tailwind's blue-900 */
+}
+
+
+/*-------------------------------
+  Base styles
+--------------------------------*/
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply transition-colors duration-300;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Raleway', sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/*-------------------------------
+  Fonts
+--------------------------------*/
+.font-lexend {
+  font-family: "Lexend Mega", sans-serif;
+}
+
+.font-livvic {
+  font-family: "Livvic", sans-serif;
+}
+
+.font-source-code {
+  font-family: "Source Code Pro", monospace;
+}
+
+/*-------------------------------
+  Containers
+--------------------------------*/
+.nav-container {
+  position: fixed;
+  top: 1rem;              
+  left: 50%;
+  padding: 30px 40px 30px 30px;
+  transform: translateX(-50%);
+  width: 90%;             
+  height: 5vh;
+  background: hsl(var(--primary));
+  border-radius: 9999px;  
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  color: hsl(var(--primary-foreground));
+}
+
+
+.container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) { .container { max-width: 640px; } }
+@media (min-width: 768px) { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+@media (min-width: 1400px) { .container { max-width: 1400px; } }
+
+/*-------------------------------
+  Buttons
+--------------------------------*/
+.my-button {
+  @apply px-6 py-2 rounded-full font-normal transition-all duration-300;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: 3px solid rgb(170, 174, 255);
+}
+
+.my-button:hover {
+  @apply scale-105 shadow-lg;
+}
+
+.my-button:active {
+  @apply scale-95;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-transform duration-300 hover:scale-[1.02];
+}
+
+.card-hover:hover {
+  @apply scale-[1.02] shadow-lg;
+}
+
+/* Text glow effect */
+.text-glow {
+  @apply relative;
+  text-shadow: 0 0 3px rgba(187, 202, 255, 0.9);
+}
+
+/* Gradient Border */
+.gradient-border {
+  @apply relative rounded-md;
+  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
+/*-------------------------------
+  Animations
+--------------------------------*/
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulsate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 43% {
+    transform: translateY(-30px);
+  }
+  70% {
+    transform: translateY(-15px);
+  }
+  90% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-pulse-subtle { animation: pulse-subtle 4s ease-in-out infinite; }
+.animate-pulsate { animation: pulsate 3s ease-in-out infinite; }
+.animate-bounce { animation: bounce 1.5s ease infinite; }
+.animate-fade { animation: fade 8s ease-in-out infinite; }
+.animate-fade-in { animation: fade-in 0.7s ease-out forwards; }
+.animate-fade-in-delay-1 { animation: fade-in 0.7s ease-out 0.2s forwards; }
+.animate-fade-in-delay-2 { animation: fade-in 0.7s ease-out 0.4s forwards; }
+.animate-fade-in-delay-3 { animation: fade-in 0.7s ease-out 0.6s forwards; }
+.animate-fade-in-delay-4 { animation: fade-in 0.7s ease-out 0.8s forwards; }
+
+/*-------------------------------
+  Navbar Items Hover
+--------------------------------*/
+
+.shimmerUnderline {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+.shimmerUnderline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #A6A6A6, transparent);
+  background-size: 300% 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.shimmerUnderline:hover {
+  color: #A6A6A6;
+}
+
+.shimmerUnderline:hover::after {
+  opacity: 1;
+  animation: shimmer 2s linear infinite !important;
+}
+
+/*-------------------------------
+  Mobile Responsive Nav Container
+--------------------------------*/
+
+/* Base mobile styles */
+@media (max-width: 767px) {
+  .nav-container {
+    position: static; /* Remove fixed positioning on mobile */
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    height: auto; /* Allow height to adapt to content */
+    padding: 1rem 1.5rem; /* Reduce padding on mobile */
+    background: hsl(var(--background)); /* Use background instead of primary */
+    border-radius: 0; /* Remove rounded corners on mobile */
+    border-bottom: 1px solid hsl(var(--border)); /* Add bottom border */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Make sure the nav itself is positioned correctly */
+  nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Adjust logo size on mobile */
+  .nav-container .text-glow {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+
+/* Desktop styles (768px and up) */
+@media (min-width: 768px) {
+  .nav-container {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    padding: 30px 40px 30px 30px;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 5vh;
+    background: hsl(var(--primary));
+    border-radius: 9999px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+}
+
+/* Ensure hamburger button is visible */
+@media (max-width: 767px) {
+  .nav-container button {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .nav-container button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: hsl(var(--foreground));
+    transition: all 0.3s ease;
+    position: absolute;
+  }
+  
+  .nav-container button span:nth-child(1) {
+    transform: translateY(-6px);
+  }
+  
+  .nav-container button span:nth-child(3) {
+    transform: translateY(6px);
+  }
+  
+  /* When menu is open */
+  .nav-container button.menu-open span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container button.menu-open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-container button.menu-open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+
+/*-------------------------------
+  Root container
+--------------------------------*/
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
