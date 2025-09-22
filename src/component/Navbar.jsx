@@ -37,7 +37,7 @@ export const Navbar = () => {
                     className="text-base font-bold flex items-center"
                     href="#home"
                 >
-                    <span className="text-glow text-foreground font-livvic">ANKCRIS LETADA</span>
+                    <span className="text-glow text-primary-foreground font-livvic">ANKCRIS LETADA</span>
                 </a>
 
                 {/* Desktop Navigation */}
