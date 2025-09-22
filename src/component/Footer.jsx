@@ -9,7 +9,7 @@ export const Footer = () => {
                 &copy; {new Date().getFullYear()} Ankcris Letada. All rights reserved.
             </p>
             
-            <a href="#home" className="p-3 mr-15 rounded-full bg-primary hover:bg-primary text-primary transition-colors">
+            <a href="#home" className="p-3 mr-15 rounded-full bg-primary text-white transition-colors">
                 <ArrowUp size={20}/>
             </a>
         </footer>
