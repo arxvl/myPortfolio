@@ -1,2 +1,2 @@
 # myPortfolio
-Front-end portfolio website
+My Portfolio using React, TailwindCSS, and JavaScipt.
