@@ -5,12 +5,12 @@ import { Github } from "lucide-react";
 const projects = [
     {
         id: 1,
-        title: "project 1",
-        description: "project description",
+        title: "MOODify App",
+        description: "Emotion-Driven UI Mood Tracker App",
         image: "/projects/project1.png",
-        tags: ["React", "TailwindCSS"],
-        demoURL: "#",
-        github: "#",
+        tags: ["React", "TailwindCSS", "JavaScript"],
+        demoURL: "https://moodify-app-flax.vercel.app/",
+        github: "https://github.com/arxvl/moodify-app.git",
     },
     {
         id: 2,
@@ -79,7 +79,7 @@ export const ProjectsSection = () => {
                     ))}
                 </div>
                 <div className="text-center mt-12">
-                    <a href="#" className="my-button w-fit flex items-center mx-auto gap-2">
+                    <a href="https://github.com/arxvl" className="my-button w-fit flex items-center mx-auto gap-2">
                         Check My Github <ArrowRight size={16}/>
                     </a>
                 </div>
