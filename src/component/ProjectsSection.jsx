@@ -14,12 +14,12 @@ const projects = [
     },
     {
         id: 2,
-        title: "project 2",
-        description: "project description",
+        title: "Log-in and Sign-up Form",
+        description: "Simple User Access Page.",
         image: "/projects/project2.png",
-        tags: ["React", "TailwindCSS"],
-        demoURL: "#",
-        github: "#",
+        tags: ["HTML", "CSS"],
+        demoURL: "login-and-signup-page-eight.vercel.app",
+        github: "https://github.com/arxvl/login-and-signup-page.git",
     },
     {
         id: 3,
