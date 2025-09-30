@@ -14,12 +14,12 @@ const projects = [
     },
     {
         id: 2,
-        title: "project 2",
-        description: "p2",
+        title: "Guitar Store Landing Page",
+        description: "A modern guitar landing page.",
         image: "/projects/project2.png",
-        tags: ["HTML", "CSS"],
-        demoURL: "#",
-        github: "#",
+        tags: ["HTML", "CSS", "JavaScript"],
+        demoURL: "https://guitar-store-landing-page.vercel.app/",
+        github: "https://github.com/arxvl/guitar-store-landing-page.git",
     },
     {
         id: 3,
