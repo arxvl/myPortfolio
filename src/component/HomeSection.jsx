@@ -21,7 +21,7 @@ return (
                 <a href="#projects">View my Projects</a>
             </button>
             <button className="font-lexend px-6 py-2 rounded-full border border-foreground text-primary hover:bg-button-hover transition-colors duration-300">
-                <a href="#resume">Download CV</a>
+                <a href="src\assets\Ankcris_Letada_CV.pdf" download="Ankcris_Letada_CV.pdf">Download CV</a>
             </button>
         </div>
     </div>
