@@ -56,9 +56,9 @@ export const ContactSection = () => {
                         <div className="pt-8">
                             <h4 className="font-medium font-source-code mb-4">Find Me On Social Media</h4>
                             <div className="flex space-x-4 justify-center">
-                                <a href="#" className="text-foreground-link transition-colors duration-300"><Facebook /></a>
-                                <a href="#" className="text-foreground-link transition-colors duration-300"><Instagram /></a>
-                                <a href="#" className="text-foreground-link transition-colors duration-300"><Linkedin /></a>
+                                <a href="https://www.facebook.com/ankcris.letada.3" className="text-foreground-link transition-colors duration-300"><Facebook /></a>
+                                <a href="https://www.instagram.com/arxxvll/" className="text-foreground-link transition-colors duration-300"><Instagram /></a>
+                                <a href="linkedin.com/in/ankcris-letada-525577313" className="text-foreground-link transition-colors duration-300"><Linkedin /></a>
                             </div>
                         </div>
                     </div>
