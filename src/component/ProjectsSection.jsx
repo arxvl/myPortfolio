@@ -6,7 +6,7 @@ const projects = [
     {
         id: 1,
         title: "MOODify App",
-        description: "Emotion-Driven UI Mood Tracker App",
+        description: "Emotion-driven UI mood tracker app.",
         image: "/projects/project1.png",
         tags: ["React", "TailwindCSS", "JavaScript"],
         demoURL: "https://moodify-app-flax.vercel.app/",
@@ -23,12 +23,12 @@ const projects = [
     },
     {
         id: 3,
-        title: "project 3",
-        description: "project description",
+        title: "Eclipse: Shadow of the Dragon",
+        description: "A text-based role-playing game.",
         image: "/projects/project3.png",
-        tags: ["React", "TailwindCSS"],
-        demoURL: "#",
-        github: "#",
+        tags: ["HTML", "CSS", "JavaScript"],
+        demoURL: "https://eclipse-rpg.vercel.app/",
+        github: "https://github.com/arxvl/eclipse-rpg.git",
     },
 ];
 
